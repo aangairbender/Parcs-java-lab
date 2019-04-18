@@ -11,7 +11,7 @@ public class AlgoData implements Serializable {
         this.mX = x;
 	 this.mItems = items;
 	 this.l = 0;
-	 this.r = items.length()-1;
+	 this.r = items.size()-1;
     }
 
     public AlgoData(AlgoData p, int s) {
@@ -30,7 +30,7 @@ public class AlgoData implements Serializable {
     }
 
     public int getItem(int i) {
-        return mItems.at(i-l);
+        return mItems.get(i-l);
     }
 
     public int getItemsCount() {
