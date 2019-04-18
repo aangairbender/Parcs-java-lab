@@ -4,7 +4,7 @@ import parcs.*;
 
 public class Algo implements AM {
     public void run(AMInfo info) {
-        AlgoData data = (Node)info.parent.readObject();
+        AlgoData data = (AlgoData)info.parent.readObject();
 
 	int len = data.getItemsLength();
 	if (len == 1)
