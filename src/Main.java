@@ -21,11 +21,11 @@ public class Main {
         curtask.end();
     }
 
-    public static Node fromFile(String filename) throws Exception {
+    public static AlgoData fromFile(String filename) throws Exception {
         Scanner sc = new Scanner(new File(filename));
         int n = sc.nextInt();
 	 int x = sc.nextInt();
-        List<int> a = new ArrayList<>();
+        List<Integer> a = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             a.add(sc.nextInt());
         }

@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 public class AlgoData implements Serializable {
     private int mX;
-    private List<int> mItems;
+    private List<Integer> mItems;
     private int l, r;
 
-    public AlgoData(List<int> items, int x) {
+    public AlgoData(List<Integer> items, int x) {
         this.mX = x;
 	 this.mItems = items;
 	 this.l = 0;
@@ -26,7 +26,7 @@ public class AlgoData implements Serializable {
     }
 
     public int getX() {
-        return x;
+        return mX;
     }
 
     public int getItem(int i) {
