@@ -6,7 +6,7 @@ public class Algo implements AM {
     public void run(AMInfo info) {
         AlgoData data = (AlgoData)info.parent.readObject();
 
-	int len = data.getItemsLength();
+	int len = data.getItemsCount();
 	if (len == 1)
 	{
 		info.parent.write(data.getItem(0) == data.getX() ? 1 : 0);
