@@ -9,7 +9,7 @@ public class Algo implements AM {
 	int len = data.getItemsCount();
 	if (len == 1)
 	{
-		info.parent.write(data.getItem(0) == data.getX() ? 1 : 0);
+		info.parent.write(calc(data.getX(), data.getItem(0)));
 		return ;
 	}
 	
@@ -26,8 +26,21 @@ public class Algo implements AM {
 	c2.write(data2);
 
 	int res = 0;
-	res += c1.readLong();
-	res += c2.readLong();
+	res += c1.readInt();
+	res += c2.readInt();
 	info.parent.write(res);
     }
+
+	private int calc(int x, int n) {
+		int cnt = 0;
+		for (int i = 1; i <= n; ++i)
+		{
+			cnt += gcd(i, x);
+		}
+		return cnt;
+	}
+
+	private int gcd(int x, int y) {
+		return y == 0 ? x : gcd(y, x % y);
+	}
 }

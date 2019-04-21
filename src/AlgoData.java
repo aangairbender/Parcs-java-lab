@@ -15,13 +15,14 @@ public class AlgoData implements Serializable {
     }
 
     public AlgoData(AlgoData p, int s) {
-	AlgoData w = new AlgoData(p.mItems, p.mX);
+	mItems = p.mItems;
+	mX = p.mX;
 	if (s == 0) {
-		w.l = p.l;
-		w.r = (p.l + p.r) / 2;
+		l = p.l;
+		r = (p.l + p.r) / 2;
 	} else {
-		w.l = (p.l + p.r) / 2 + 1;
-		w.r = p.r;
+		l = (p.l + p.r) / 2 + 1;
+		r = p.r;
 	}
     }
 
@@ -30,7 +31,7 @@ public class AlgoData implements Serializable {
     }
 
     public int getItem(int i) {
-        return mItems.get(i-l);
+        return mItems.get(l+i);
     }
 
     public int getItemsCount() {
